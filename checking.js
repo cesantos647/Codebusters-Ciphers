@@ -25,7 +25,7 @@ function change_option() {
 
 		document.getElementById('key_input').innerHTML = 'Amount Shifted'
 
-	} else if(cipher_value === 'Hill') {
+	} else {
 
 		document.getElementById('message_input').innerHTML = 'Your Message';
 

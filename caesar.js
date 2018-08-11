@@ -1,4 +1,5 @@
 //This is a project that encrypts a message using a caesar cipher
+/*The problem is that you can only encrpyt/decrypt once; make it so that the joined shit becomes an array again*/
 
 //creates an array for the alphabet and numbers
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; 
@@ -180,7 +181,7 @@ function decode() {
 				if(message[y][i] === alphabet[x]) {
 
 					//Decrypts letter
-					decryptionWord.push(alphabet[((x + shift) % alphabet.length)]);
+					decryptionWord.push(alphabet[((x + (26-shift)) % alphabet.length)]);
 
 					//Cancels the search
 					check = true;
@@ -188,7 +189,7 @@ function decode() {
 				} else if(message[y][i] === numbers[x % numbers.length]) {
 
 					//Decrypts number
-					decryptionWord.push(numbers[((x + shift) % numbers.length)]);
+					decryptionWord.push(numbers[((x + (26-shift) % numbers.length))]);
 
 					//Cancels the search
 					check = true;
@@ -198,7 +199,7 @@ function decode() {
 			}
 
 		}
-
+		console.log(decryptionWord);
 		//Joins the array of Decrypted letters into a word 
 		decryptionWord = decryptionWord.join('');
 		
