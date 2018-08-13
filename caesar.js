@@ -187,7 +187,7 @@ function decode() {
 				if(message[y][i] === alphabet[x]) {
 
 					//Decrypts letter
-					decryptionWord.push(alphabet[((x + shift) % alphabet.length)]);
+					decryptionWord.push(alphabet[((x - shift) % alphabet.length)]);
 
 					//Cancels the search
 					check = true;
@@ -195,7 +195,7 @@ function decode() {
 				} else if(message[y][i] === numbers[x % numbers.length]) {
 
 					//Decrypts number
-					decryptionWord.push(numbers[((x + shift) % numbers.length)]);
+					decryptionWord.push(numbers[((x - shift) % numbers.length)]);
 
 					//Cancels the search
 					check = true;
