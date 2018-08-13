@@ -17,23 +17,8 @@ function encode_a() {
 
 	}
 
-	/*//Gets shift number that was submitted
-	key = parseInt(document.getElementById('key').value);
-
-	//Checks if shift number is actually a number
-	if(isNaN(key) === true ) {
-
-		alert('Please submit a number');
-
-		return false;
-
-	}*/
-
 	//Displays message
 	document.getElementById("input").innerHTML = 'Message: ' + message;
-
-	//Displays shift number
-	//document.getElementById("keys").innerHTML = 'Shift Number: ' + shift;
 
 	//Splits message into array of words
 	message = message.split(' ');
@@ -63,7 +48,7 @@ function encode_a() {
 				if(message[y][i] === alphabet[x]) {
 
 					//Encrypts letter
-					encryptionWord.push(alphabet[((alphabet.length - x) % alphabet.length)]);
+					encryptionWord.push(alphabet[((alphabet.length - x - 1) % alphabet.length)]);
 
 					//Cancels the search
 					check = true;
@@ -71,7 +56,7 @@ function encode_a() {
 				} else if(message[y][i] === numbers[x % numbers.length]) {
 
 					//Encrypts number
-					encryptionWord.push(numbers[((numbers.length - x) % numbers.length)]);
+					encryptionWord.push(numbers[((numbers.length - x - 1) % numbers.length)]);
 
 					//Cancels the search
 					check = true;
@@ -86,8 +71,7 @@ function encode_a() {
 		
 		//Pushes encrypted word into the encrypted message array
 		encryption.push(encryptionWord);
-
-	
+		
 	}
 
 	//Joins each item in the array into a single string

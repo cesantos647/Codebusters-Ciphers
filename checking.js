@@ -29,8 +29,6 @@ function change_option() {
 
 		document.getElementById('message_input').innerHTML = 'Your Message';
 
-		//document.getElementById('key_input').innerHTML = 'Key'
-
 	} else if(cipher_value ==='Atbash' && version_value ==='Decrypt') {
 
 		document.getElementById('message_input').innerHTML = 'Encrypted Message';
