@@ -34,6 +34,8 @@ var hillKey = [];
 
 var hillKeyNum = [];
 
+var hillKeyNumproto = [];
+
 var hillKeyCheck = [];
 
 var hillKeyNumCheck = [];

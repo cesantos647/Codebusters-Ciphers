@@ -149,6 +149,12 @@ function encode_h() {
 		}
 	}
 
+	//Way to make the key actually work since the method places the array items the wrong way, vertical instead of horizontally first
+	var hillKeyCheckReal = [[hillKeyCheck[0][0],hillKeyCheck[1][0]],[hillKeyCheck[0][1],hillKeyCheck[1][1]]]
+	var hillKeyNumCheckReal = [[hillKeyNumCheck[0][0],hillKeyNumCheck[1][0]],[hillKeyNumCheck[0][1],hillKeyNumCheck[1][1]]]
+	hillKeyCheck = hillKeyCheckReal;
+	hillKeyNumCheck = hillKeyNumCheckReal;
+	console.log(hillKeyCheckReal);
 	console.log(hillKeyCheck);
 
 	console.log(hillKeyNumCheck);
