@@ -37,3 +37,5 @@ var hillKeyNum = [];
 var hillKeyCheck = [];
 
 var hillKeyNumCheck = [];
+
+var hillencryptWord = [];
