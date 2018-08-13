@@ -38,11 +38,11 @@ function change_option() {
 function execute() {
 	if(cipher_value === 'Caesar' && version_value === 'Encrypt') {
 
-		encode();
+		encode_c();
 	
 	} else if(cipher_value ==='Caesar' && version_value === 'Decrypt') {
 
-		decode();
+		decode_c();
 
 	} else if(cipher_value === 'Hill') {
 

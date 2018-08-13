@@ -1,29 +1,8 @@
-//This is a project that encrypts a message using a caesar cipher
-
-//creates an array for the alphabet and numbers
-var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; 
-
-var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-
-//Takes message and shift number and creates a variable for the message
-var message;
-
-var shift;
-
-var encryptionWord = [];
-
-var decryptionWord = [];
-
-var encryption = [];
-
-var decryption = [];
-
-
-
 //Encodes message by the shift number using a caesar cipher
-function encode() {
+function encode_c() {
 
 	encryptionWord = [];
+	
 	encryption = [];
 
 	//Gets message that was submitted
@@ -123,7 +102,7 @@ function encode() {
 
 
 
-function decode() {
+function decode_c() {
 
 	decryptionWord= [];
 
