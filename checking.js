@@ -47,6 +47,7 @@ function change_option() {
 		document.getElementById('key_input').style.display = 'block';
 
 	}
+	
 }
 
 function execute() {
@@ -54,7 +55,7 @@ function execute() {
 
 		encode_c();
 	
-	} else if(cipher_value ==='Caesar' && version_value === 'Decrypt') {
+	} else if(cipher_value ==='Caesar' && version_value === 'Encrypt') {
 
 		decode_c();
 
