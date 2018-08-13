@@ -58,9 +58,13 @@ function execute() {
 
 		decode_c();
 
-	} else if(cipher_value === 'Atbash') {
+	} else if(cipher_value === 'Atbash' && version_value === 'Decrypt') {
 
 		encode_a();
+
+	} else if() {
+
+		decode_a();
 
 	}
 }
