@@ -1,34 +1,8 @@
-<<<<<<< HEAD
-//This is a project that encrypts a message using a caesar cipher
-/*The problem is that you can only encrpyt/decrypt once; make it so that the joined shit becomes an array again*/
-
-//creates an array for the alphabet and numbers
-var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; 
-
-var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-
-//Takes message and shift number and creates a variable for the message
-var message;
-
-var shift;
-
-var encryptionWord = [];
-
-var decryptionWord = [];
-
-var encryption = [];
-
-var decryption = [];
-
-
-
-=======
->>>>>>> 716a07c073743af8e1b302bef043d6c9bf78976f
-//Encodes message by the shift number using a caesar cipher
-function encode_c() {
+//No need for a key
+function encode_a() {
 
 	encryptionWord = [];
-	
+
 	encryption = [];
 
 	//Gets message that was submitted
@@ -43,23 +17,8 @@ function encode_c() {
 
 	}
 
-	//Gets shift number that was submitted
-	shift = parseInt(document.getElementById('key').value);
-
-	//Checks if shift number is actually a number
-	if(isNaN(shift) === true ) {
-
-		alert('Please submit a number');
-
-		return false;
-
-	}
-
 	//Displays message
 	document.getElementById("input").innerHTML = 'Message: ' + message;
-
-	//Displays shift number
-	document.getElementById("keys").innerHTML = 'Shift Number: ' + shift;
 
 	//Splits message into array of words
 	message = message.split(' ');
@@ -85,11 +44,11 @@ function encode_c() {
 			//Checks the alphabet array until the letter is found
 			for(var x = 0; x < alphabet.length && check === false; x++){
 
-				//Once the letter is found, the letter is shifted by the amount specified by the user
+				//Once the letter is found, the letter is shifted using atbash encryption
 				if(message[y][i] === alphabet[x]) {
 
 					//Encrypts letter
-					encryptionWord.push(alphabet[((x + shift) % alphabet.length)]);
+					encryptionWord.push(alphabet[((alphabet.length - x - 1) % alphabet.length)]);
 
 					//Cancels the search
 					check = true;
@@ -97,7 +56,7 @@ function encode_c() {
 				} else if(message[y][i] === numbers[x % numbers.length]) {
 
 					//Encrypts number
-					encryptionWord.push(numbers[((x + shift) % numbers.length)]);
+					encryptionWord.push(numbers[((numbers.length - x - 1) % numbers.length)]);
 
 					//Cancels the search
 					check = true;
@@ -113,7 +72,6 @@ function encode_c() {
 		//Pushes encrypted word into the encrypted message array
 		encryption.push(encryptionWord);
 
-	
 	}
 
 	//Joins each item in the array into a single string
@@ -123,12 +81,9 @@ function encode_c() {
 	document.getElementById("output").innerHTML = 'Encrypted Message: ' + encryption;
 
 	return false;
-
 }
 
-
-
-function decode_c() {
+function decode_a() {
 
 	decryptionWord= [];
 
@@ -146,23 +101,8 @@ function decode_c() {
 
 	}
 
-	//Gets shift number that was submitted
-	shift = parseInt(document.getElementById('key').value);
-
-	//Checks if shift number is actually a number
-	if(isNaN(shift) === true ) {
-
-		alert('Please submit a number');
-
-		return false;
-
-	}
-
 	//Displays encrypted message
 	document.getElementById("input").innerHTML = 'Encrypted Message: ' + message;
-
-	//Displays shift number
-	document.getElementById("keys").innerHTML = 'Shift: ' + shift;
 
 	//Splits message into array of words
 	message = message.split(' ');
@@ -192,11 +132,7 @@ function decode_c() {
 				if(message[y][i] === alphabet[x]) {
 
 					//Decrypts letter
-<<<<<<< HEAD
-					decryptionWord.push(alphabet[((x + (26-shift)) % alphabet.length)]);
-=======
-					decryptionWord.push(alphabet[((x - shift) % alphabet.length)]);
->>>>>>> 716a07c073743af8e1b302bef043d6c9bf78976f
+					decryptionWord.push(alphabet[((alphabet.length - x - 1) % alphabet.length)]);
 
 					//Cancels the search
 					check = true;
@@ -204,11 +140,7 @@ function decode_c() {
 				} else if(message[y][i] === numbers[x % numbers.length]) {
 
 					//Decrypts number
-<<<<<<< HEAD
-					decryptionWord.push(numbers[((x + (26-shift) % numbers.length))]);
-=======
-					decryptionWord.push(numbers[((x - shift) % numbers.length)]);
->>>>>>> 716a07c073743af8e1b302bef043d6c9bf78976f
+					decryptionWord.push(numbers[((alphabet.length - x - 1) % numbers.length)]);
 
 					//Cancels the search
 					check = true;
@@ -218,13 +150,12 @@ function decode_c() {
 			}
 
 		}
-		console.log(decryptionWord);
+
 		//Joins the array of Decrypted letters into a word 
 		decryptionWord = decryptionWord.join('');
 		
 		//Pushes Decrypted word into the decrypted message array
 		decryption.push(decryptionWord);
-
 	
 	}
 
@@ -237,4 +168,3 @@ function decode_c() {
 	return false;
 
 }
-
