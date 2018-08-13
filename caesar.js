@@ -23,6 +23,9 @@ var decryption = [];
 //Encodes message by the shift number using a caesar cipher
 function encode() {
 
+	encryptionWord = [];
+	encryption = [];
+
 	//Gets message that was submitted
 	message = document.getElementById('message').value;
 
@@ -121,6 +124,10 @@ function encode() {
 
 
 function decode() {
+
+	decryptionWord= [];
+
+	decryption =[];
 
 	//Gets message that was submitted
 	message = document.getElementById('message').value;
