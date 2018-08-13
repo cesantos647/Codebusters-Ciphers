@@ -47,7 +47,7 @@ function change_option() {
 		document.getElementById('key_input').style.display = 'block';
 
 	}
-	
+
 }
 
 function execute() {
@@ -63,7 +63,7 @@ function execute() {
 
 		encode_a();
 
-	} else if() {
+	} else {
 
 		decode_a();
 
