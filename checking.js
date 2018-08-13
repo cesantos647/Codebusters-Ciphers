@@ -25,14 +25,30 @@ function change_option() {
 
 		document.getElementById('key_input').innerHTML = 'Amount Shifted'
 
-	} else if(cipher_value === 'Hill') {
+	} else if(cipher_value === 'Atbash' && version_value === 'Encrypt') {
 
 		document.getElementById('message_input').innerHTML = 'Your Message';
 
-		document.getElementById('key_input').innerHTML = 'Key'
+		//document.getElementById('key_input').innerHTML = 'Key'
 
+	} else if(cipher_value ==='Atbash' && version_value ==='Decrypt') {
+
+		document.getElementById('message_input').innerHTML = 'Encrypted Message';
 	}
 
+	if(cipher_value === 'Atbash') {
+
+		document.getElementById('key').style.display = 'none';
+		
+		document.getElementById('key_input').style.display = 'none';
+
+	} else {
+
+		document.getElementById('key').style.display = 'block';
+
+		document.getElementById('key_input').style.display = 'block';
+
+	}
 }
 
 function execute() {
@@ -44,9 +60,9 @@ function execute() {
 
 		decode_c();
 
-	} else if(cipher_value === 'Hill') {
+	} else if(cipher_value === 'Atbash') {
 
-		
+		encode_a();
 
 	}
 }
