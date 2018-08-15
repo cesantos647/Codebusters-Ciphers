@@ -12,6 +12,8 @@
 
 	  <script type = 'text/javascript' src = 'atbash.js'></script>
 
+      <script type="text/javascript" src = 'affine.js'></script>
+
 	  <script type = 'text/javascript' src = 'caesar.js'></script>
 	  
       <script type = 'text/javascript' src = 'aristocrat.js'></script>
@@ -45,6 +47,8 @@
 
         <option value = 'Hill'> Hill Cipher </option>
 
+        <option value = 'Affine'> Affine Cipher </option>
+
         <option value = 'Aristocrat'> Aristocrat Cipher </option>
 
         <option value= 'Patristocrat'> Patristocrat Cipher </option>
@@ -60,6 +64,8 @@
 	<p id = 'message_input'>Message</p> <input type='text' id='message'/>
 
  	<p id = 'key_input'>Key</p><input type='text' id='key'/>
+
+    <p id = 'key_input2'>Key</p><input type="text" id="key2">
 
     <div id = checkbox> <input type = 'checkbox' name = 'Random Key' onclick = 'change_option()' id = 'checkbox_input'/> Randomize Key </div>
 

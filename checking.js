@@ -57,7 +57,7 @@ function change_option() {
 
 	}
 
-	if(cipher_value === 'Hill') {
+	if(cipher_value === 'Hill' || cipher_value === 'Affine') {
 
 		document.getElementById('Decrypt').style.display = 'none';
 
@@ -78,6 +78,24 @@ function change_option() {
 	} else {
 
 		document.getElementById('checkbox').style.display = 'none'
+
+	}
+
+	if(cipher_value === 'Affine') {
+
+		document.getElementById('key_input').innerHTML = 'Multiplier (a)';
+
+		document.getElementById('key_input2').innerHTML = 'Linear Shift (b)';
+
+		document.getElementById('key2').style.display = 'block';
+		
+		document.getElementById('key_input2').style.display = 'block';
+
+	} else {
+
+		document.getElementById('key2').style.display = 'none';
+		
+		document.getElementById('key_input2').style.display = 'none';
 
 	}
 
@@ -148,5 +166,10 @@ function execute() {
 
 		decode_p();
 
+	} else if(cipher_value === 'Affine') {
+
+		encode_af();
+
 	}
+	
 }
