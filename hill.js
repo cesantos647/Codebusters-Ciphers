@@ -158,10 +158,12 @@ function encode_h() {
 	console.log(hillKeyCheck);
 
 	console.log(hillKeyNumCheck);
+
 	hillEncryptWord = [];
 	//Now for the actual encryption
 	for(var t = 0; t < encryptionNumCheck.length; t++) {
 		hillEncryptWord.push([(((hillKeyNumCheck[0][0] * encryptionNumCheck[t][0]) + (hillKeyNumCheck[1][0] * encryptionNumCheck[t][1])) % 26), (((hillKeyNumCheck[0][1] * encryptionNumCheck[t][0]) + (hillKeyNumCheck[1][1] * encryptionNumCheck[t][1])) % 26)]);
+			console.log(([(((hillKeyNumCheck[0][0] * encryptionNumCheck[t][0]) + (hillKeyNumCheck[1][0] * encryptionNumCheck[t][1])) % 26), (((hillKeyNumCheck[0][1] * encryptionNumCheck[t][0]) + (hillKeyNumCheck[1][1] * encryptionNumCheck[t][1])) % 26)]));
 	}
 
 	console.log(hillEncryptWord);
@@ -174,7 +176,7 @@ function encode_h() {
 
 				if(hillEncryptWord[z][o] === alphabet_number[h]) {
 
-					encryptionWord.push(alphabet[h]);
+					encryptionWord.push(alphabet[(h)]);
 
 				}
 
