@@ -30,9 +30,9 @@ function encode_h() {
 	key = document.getElementById('key').value;
 
 	//Checks if there is a key
-	if(typeof(key) === 'undefined' || key === '' || key.length > 4) {
+	if(typeof(key) === 'undefined' || key === '' || key.length !== 4) {
 
-		alert('Please submit a key');
+		alert('Please submit a key with 4 characters');
 
 		return false;
 
@@ -152,19 +152,28 @@ function encode_h() {
 
 	//Way to make the key actually work since the method places the array items the wrong way, vertical instead of horizontally first
 	var hillKeyCheckReal = [[hillKeyCheck[0][0],hillKeyCheck[1][0]],[hillKeyCheck[0][1],hillKeyCheck[1][1]]]
+
 	var hillKeyNumCheckReal = [[hillKeyNumCheck[0][0],hillKeyNumCheck[1][0]],[hillKeyNumCheck[0][1],hillKeyNumCheck[1][1]]]
+	
 	hillKeyCheck = hillKeyCheckReal;
+	
 	hillKeyNumCheck = hillKeyNumCheckReal;
+	
 	console.log(hillKeyCheckReal);
+	
 	console.log(hillKeyCheck);
 
 	console.log(hillKeyNumCheck);
 
 	hillEncryptWord = [];
+	
 	//Now for the actual encryption
 	for(var t = 0; t < encryptionNumCheck.length; t++) {
+	
 		hillEncryptWord.push([(((hillKeyNumCheck[0][0] * encryptionNumCheck[t][0]) + (hillKeyNumCheck[1][0] * encryptionNumCheck[t][1])) % 26), (((hillKeyNumCheck[0][1] * encryptionNumCheck[t][0]) + (hillKeyNumCheck[1][1] * encryptionNumCheck[t][1])) % 26)]);
+	
 			console.log(([(((hillKeyNumCheck[0][0] * encryptionNumCheck[t][0]) + (hillKeyNumCheck[1][0] * encryptionNumCheck[t][1])) % 26), (((hillKeyNumCheck[0][1] * encryptionNumCheck[t][0]) + (hillKeyNumCheck[1][1] * encryptionNumCheck[t][1])) % 26)]));
+	
 	}
 
 	console.log(hillEncryptWord);
@@ -190,6 +199,7 @@ function encode_h() {
 	encryption = encryptionWord.join('');
 
 	document.getElementById('output').innerHTML = 'Encrypted Message: ' + encryption;
+	
 	console.log(encryption);
 
 }
