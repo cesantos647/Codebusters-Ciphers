@@ -42,20 +42,6 @@ function change_option() {
 
 	}
 
-	if(cipher_value === 'Atbash' || cipher_value === 'Baconian') {
-
-		document.getElementById('key').style.display = 'none';
-		
-		document.getElementById('key_input').style.display = 'none';
-
-	} else {
-
-		document.getElementById('key').style.display = 'block';
-
-		document.getElementById('key_input').style.display = 'block';
-
-	}
-
 	if(cipher_value === 'Hill' || cipher_value === 'Affine') {
 
 		document.getElementById('Decrypt').style.display = 'none';
@@ -112,7 +98,7 @@ function change_option() {
 
 	}
 
-	if(document.getElementById('checkbox_input').checked === true) {
+	if(document.getElementById('checkbox_input').checked === true || cipher_value === 'Atbash' || cipher_value === 'Baconian') {
 
 		document.getElementById('key').style.display = 'none';
 		
@@ -171,6 +157,10 @@ function execute() {
 	} else if(cipher_value === 'Affine') {
 
 		encode_af();
+
+	} else if(cipher_value === 'Baconian' && version_value === 'Encrypt') {
+
+		encode_b();
 
 	}
 
