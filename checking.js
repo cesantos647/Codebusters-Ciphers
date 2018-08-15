@@ -67,7 +67,7 @@ function change_option() {
 
 	}
 
-	if(cipher_value === 'Aristocrat' && version_value === 'Encrypt' || cipher_value === 'Patristocrat' && version_value = 'Encrypt') {
+	if((cipher_value === 'Aristocrat'  || cipher_value === 'Patristocrat') && version_value === 'Encrypt') {
 
 		document.getElementById('message_input').innerHTML = 'Your Message';
 
