@@ -129,6 +129,9 @@ function change_option() {
 
 }
 
+
+
+
 function execute() {
 	if(cipher_value === 'Caesar' && version_value === 'Encrypt') {
 
@@ -171,5 +174,5 @@ function execute() {
 		encode_af();
 
 	}
-	
+
 }
