@@ -25,11 +25,8 @@ function change_option() {
 
 		document.getElementById('key_input').innerHTML = 'Amount Shifted'
 
-<<<<<<< HEAD
-	} else {
-=======
 	} else if(cipher_value === 'Atbash' && version_value === 'Encrypt') {
->>>>>>> 716a07c073743af8e1b302bef043d6c9bf78976f
+
 
 		document.getElementById('message_input').innerHTML = 'Your Message';
 
@@ -51,6 +48,7 @@ function change_option() {
 		document.getElementById('key_input').style.display = 'block';
 
 	}
+
 }
 
 function execute() {
@@ -58,7 +56,7 @@ function execute() {
 
 		encode_c();
 	
-	} else if(cipher_value ==='Caesar' && version_value === 'Decrypt') {
+	} else if(cipher_value ==='Caesar' && version_value === 'Encrypt') {
 
 		decode_c();
 
@@ -66,7 +64,7 @@ function execute() {
 
 		encode_a();
 
-	} else if() {
+	} else {
 
 		decode_a();
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //This is a project that encrypts a message using a caesar cipher
 /*The problem is that you can only encrpyt/decrypt once; make it so that the joined shit becomes an array again*/
 
@@ -188,9 +187,17 @@ function decode_c() {
 				if(message[y][i] === alphabet[x]) {
 
 					//Decrypts letter
+<<<<<<< HEAD
 					decryptionWord.push(alphabet[((x + (26-shift)) % alphabet.length)]);
 
 					decryptionWord.push(alphabet[((x - shift) % alphabet.length)]);
+=======
+
+					decryptionWord.push(alphabet[((x + (26-shift)) % alphabet.length)]);
+
+					decryptionWord.push(alphabet[((x - shift) % alphabet.length)]);
+
+>>>>>>> 14e9b962fe230f289200fd0cc60538128538370c
 
 					//Cancels the search
 					check = true;
