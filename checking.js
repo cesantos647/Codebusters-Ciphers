@@ -144,5 +144,9 @@ function execute() {
 
 		encode_p();
 
+	} else if(cipher_value === 'Patristocrat' && version_value === 'Decrypt') {
+
+		decode_p();
+
 	}
 }

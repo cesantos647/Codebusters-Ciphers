@@ -142,3 +142,93 @@ function encode_p() {
 	return false;
 
 }
+
+
+function decode_p() {
+
+	decryption = [];
+
+	//Gets message that was submitted
+	message = document.getElementById('message').value;
+
+	//Checks if there is a message
+	if(typeof(message) === 'undefined' || message === '') {
+
+		alert('Please submit a message');
+
+		return false;
+
+	}
+
+	key = document.getElementById('key').value;
+
+	if(key.length !== 26) {
+
+		alert('Please submit a proper key')
+
+		return false;
+
+	}
+
+	//Displays message
+	document.getElementById("input").innerHTML = 'Encrypted Message: ' + message;
+
+	//Displays shift number
+	document.getElementById("keys").innerHTML = 'Key: ' + alphabet.join('') + ' = ' + key;
+
+	//Splits message into array of words
+	message = message.split(' ');
+
+	//Splits each word in the message into an array of letters
+	for(var z = 0; z < message.length; z++) {
+
+		message[z] = message[z].split('');
+
+	}
+	//Encodes message word by word
+	for(var y = 0; y < message.length; y++) {
+
+		//Resets array to prepare for a new word
+		decryptionWord = [];
+
+		//Encrypts each letter or number in the word
+		for(var i = 0; i < message[y].length; i++) {
+
+			//Resets the search for each letter in the message
+			var check = false
+
+			//Checks the alphabet array until the letter is found
+			for(var x = 0; x < key.length && check === false; x++) {
+
+				//Once the letter is found, the letter is changed based on the key
+				if(message[y][i] === key[x]) {
+
+					//Encrypts letter
+					decryptionWord.push(alphabet[x]);
+
+					//Cancels the search
+					check = true;
+
+				} 
+
+			}
+
+		}
+		
+		//Joins the array of encrypted letters into a word 
+		decryptionWord = decryptionWord.join('');
+		
+		//Pushes encrypted word into the encrypted message array
+		decryption.push(decryptionWord);
+	}
+
+	decryption = decryption.join(' ');
+	
+	//Displays the encrypted message
+	document.getElementById("output").innerHTML = 'Encrypted Message: ' + decryption;
+
+	console.log(decryption);
+	
+	return false;
+
+}
