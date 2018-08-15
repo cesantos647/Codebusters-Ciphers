@@ -1,5 +1,6 @@
 
 var version, cipher, version_value, cipher_value;
+
 //Function to change what's on the screen based on cipher and if they want to encode or decrypt
 function change_option() {
 

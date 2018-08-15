@@ -1,3 +1,4 @@
+//This can only support 2x2 keys
 //The way the key is set up needs to be fixed
 function encode_h() {
 

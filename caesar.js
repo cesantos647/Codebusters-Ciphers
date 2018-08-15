@@ -1,24 +1,6 @@
 //This is a project that encrypts a message using a caesar cipher
 /*The problem is that you can only encrpyt/decrypt once; make it so that the joined shit becomes an array again*/
 
-//creates an array for the alphabet and numbers
-var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; 
-
-var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-
-//Takes message and shift number and creates a variable for the message
-var message;
-
-var shift;
-
-var encryptionWord = [];
-
-var decryptionWord = [];
-
-var encryption = [];
-
-var decryption = [];
-
 //Encodes message by the shift number using a caesar cipher
 function encode_c() {
 
@@ -187,17 +169,14 @@ function decode_c() {
 				if(message[y][i] === alphabet[x]) {
 
 					//Decrypts letter
-<<<<<<< HEAD
-					decryptionWord.push(alphabet[((x + (26-shift)) % alphabet.length)]);
-
-					decryptionWord.push(alphabet[((x - shift) % alphabet.length)]);
-=======
-
 					decryptionWord.push(alphabet[((x + (26-shift)) % alphabet.length)]);
 
 					decryptionWord.push(alphabet[((x - shift) % alphabet.length)]);
 
->>>>>>> 14e9b962fe230f289200fd0cc60538128538370c
+					decryptionWord.push(alphabet[((x + (26-shift)) % alphabet.length)]);
+
+					decryptionWord.push(alphabet[((x - shift) % alphabet.length)]);
+
 
 					//Cancels the search
 					check = true;

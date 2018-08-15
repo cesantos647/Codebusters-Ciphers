@@ -26,6 +26,8 @@ var encryption = [];
 
 var decryption = [];
 
+//Hill Cipher
+
 var hillSplit = [];
 
 var hillSplitNum = [];
