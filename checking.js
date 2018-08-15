@@ -26,12 +26,11 @@ function change_option() {
 
 		document.getElementById('key_input').innerHTML = 'Amount Shifted'
 
-	} else if(cipher_value === 'Atbash' && version_value === 'Encrypt') {
-
+	} else if((cipher_value === 'Atbash' || cipher_value === 'Baconian') && version_value === 'Encrypt') {
 
 		document.getElementById('message_input').innerHTML = 'Your Message';
 
-	} else if(cipher_value ==='Atbash' && version_value ==='Decrypt') {
+	} else if((cipher_value ==='Atbash' || cipher_value === 'Baconian') && version_value ==='Decrypt') {
 
 		document.getElementById('message_input').innerHTML = 'Encrypted Message';
 
@@ -43,7 +42,7 @@ function change_option() {
 
 	}
 
-	if(cipher_value === 'Atbash') {
+	if(cipher_value === 'Atbash' || cipher_value === 'Baconian') {
 
 		document.getElementById('key').style.display = 'none';
 		

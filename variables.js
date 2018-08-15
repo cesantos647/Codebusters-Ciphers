@@ -7,6 +7,7 @@ var alphabet_number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
 
 var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 
+var baconian_number = ['aaaaa', 'aaaab', 'aaaba', 'aaabb', 'aabaa', 'aabab', 'aabba', 'aabbb', 'abaaa', 'abaab', 'ababa', 'ababb', 'abbaa', 'abbab', 'abbba', 'abbbb', 'baaaa', 'baaab', 'baaba', 'baabb', 'babaa', 'babab', 'babba', 'babbb', 'bbaaa', 'bbaab'];
 //Takes message and shift number and creates a variable for the message
 var message;
 
