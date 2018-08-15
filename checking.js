@@ -57,13 +57,41 @@ function change_option() {
 
 	}
 
-	if(cipher_value === 'Hill' || cipher_value === 'Aristocrat') {
+	if(cipher_value === 'Hill') {
 
 		document.getElementById('Decrypt').style.display = 'none';
 
 	} else {
 
 		document.getElementById('Decrypt').style.display = 'block';
+
+	}
+
+	if(cipher_value === 'Aristocrat' && version_value === 'Encrypt') {
+
+		document.getElementById('message_input').innerHTML = 'Your Message';
+
+		document.getElementById('key_input').innerHTML = 'Key';
+
+		document.getElementById('checkbox').style.display = 'block'
+
+	} else {
+
+		document.getElementById('checkbox').style.display = 'none'
+
+	}
+
+	if(document.getElementById('checkbox').style.display === 'none') {
+
+		document.getElementById('checkbox_input').checked = false;
+
+	}
+
+	if(cipher_value === 'Aristocrat' && version_value === 'Decrypt')  {
+
+		document.getElementById('message_input').innerHTML = 'Encrypted Message';
+
+		document.getElementById('key_input').innerHTML = 'Key';
 
 	}
 
@@ -81,19 +109,6 @@ function change_option() {
 
 	}
 
-	if(cipher_value === 'Aristocrat') {
-
-		document.getElementById('message_input').innerHTML = 'Your Message';
-
-		document.getElementById('key_input').innerHTML = 'Key';
-
-		document.getElementById('checkbox_input').style.display = 'block'
-
-	} else {
-
-		document.getElementById('checkbox').style.display = 'none'
-
-	}
 }
 
 function execute() {
@@ -116,6 +131,14 @@ function execute() {
 	} else if(cipher_value === 'Hill') {
 
 		encode_h();
+
+	} else if(cipher_value === 'Aristocrat' && version_value === 'Encrypt') {
+
+		encode_ar();
+
+	} else if(cipher_value === 'Aristocrat' && version_value === 'Decrypt') {
+
+		decode_ar();
 
 	}
 }
