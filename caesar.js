@@ -84,7 +84,7 @@ function encode_c() {
 			}
 
 		}
-		
+
 		//Joins the array of encrypted letters into a word 
 		encryptionWord = encryptionWord.join('');
 		
@@ -103,6 +103,9 @@ function encode_c() {
 	return false;
 
 }
+
+
+
 
 
 

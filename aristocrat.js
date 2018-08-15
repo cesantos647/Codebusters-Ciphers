@@ -187,6 +187,9 @@ function encode_ar() {
 }
 
 
+
+
+
 function decode_ar() {
 
 	decryption = [];
