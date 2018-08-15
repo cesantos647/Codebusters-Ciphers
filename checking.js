@@ -34,6 +34,13 @@ function change_option() {
 	} else if(cipher_value ==='Atbash' && version_value ==='Decrypt') {
 
 		document.getElementById('message_input').innerHTML = 'Encrypted Message';
+
+	} else if(cipher_value === 'Hill') {
+
+		document.getElementById('message_input').innerHTML = 'Your Message'
+
+		document.getElementById('key_input').innerHTML = 'Key (4 Characters)'
+
 	}
 
 	if(cipher_value === 'Atbash') {
@@ -47,6 +54,16 @@ function change_option() {
 		document.getElementById('key').style.display = 'block';
 
 		document.getElementById('key_input').style.display = 'block';
+
+	}
+
+	if(cipher_value === 'Hill') {
+
+		document.getElementById('Decrypt').style.display = 'none';
+
+	} else {
+
+		document.getElementById('Decrypt').style.display = 'block';
 
 	}
 
@@ -65,9 +82,13 @@ function execute() {
 
 		encode_a();
 
-	} else {
+	} else if(cipher_value === 'Atbash' && version_value === 'Encrypt') {
 
 		decode_a();
+
+	} else if(cipher_value === 'Hill') {
+
+		encode_h
 
 	}
 }

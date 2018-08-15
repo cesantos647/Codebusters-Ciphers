@@ -25,9 +25,9 @@
 
   		<option value = '' disabled selected> Encryption or Decryption? </option>
 
-  		<option value = 'Encrypt'>Encrypt </option>
+  		<option value = 'Encrypt' id = 'Encrypt'> Encrypt </option>
   		
-  		<option value = 'Decrypt'> Decrypt </option>
+  		<option value = 'Decrypt' id = 'Decrypt'> Decrypt </option>
   	
   	</select>
 
@@ -38,6 +38,8 @@
   		<option value = 'Caesar'> Caesar Cipher </option>
   	
   		<option value = 'Atbash'> Atbash Cipher </option>
+
+      <option value = 'Hill'> Hill Cipher </option>
   	
   	</select>
 
@@ -52,8 +54,6 @@
  	<p id = 'key_input'>Key</p><input type='text' id='key'/>
 
 	<br><p><button onclick="execute()">Submit</button></p>
-
-	<button onclick='encode_h()'></button>
 
   </body>
  
