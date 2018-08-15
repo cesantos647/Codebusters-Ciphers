@@ -162,6 +162,10 @@ function execute() {
 
 		encode_b();
 
+	} else if(cipher_value === 'Baconian' && version_value === 'Decrypt') {
+
+		decode_b();
+
 	}
 
 }
