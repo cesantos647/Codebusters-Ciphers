@@ -87,6 +87,9 @@ function keyGenerate() {
 	key = random_key;
 }
 
+
+
+
 function encode_ar() {
 
 	encryption = [];

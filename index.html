@@ -41,7 +41,9 @@
   	
   		<option value = 'Atbash'> Atbash Cipher </option>
 
-      <option value = 'Hill'> Hill Cipher </option>
+        <option value = 'Hill'> Hill Cipher </option>
+
+        <option value = 'Aristocrat'> Aristocrat Cipher </option>
   	
   	</select>
 
@@ -55,9 +57,12 @@
 
  	<p id = 'key_input'>Key</p><input type='text' id='key'/>
 
+    <div id = checkbox> <input type = 'checkbox' name = 'Random Key' onclick = 'change_option()' id = 'checkbox_input'/> Randomize Key </div>
+
 	<br><p><button onclick="execute()">Submit</button></p>
 
     <button onclick = 'keyGenerate()'> Generate Random Key </button>
+
     <button onclick = 'encode_ar()'> Aristocrat </button>
 
   </body>
