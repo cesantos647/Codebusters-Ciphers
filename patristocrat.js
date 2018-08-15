@@ -95,8 +95,6 @@ function encode_p() {
 
 	encryptionP = encryptionP.join('').split('');
 	
-	////////////////////////////////////////////////////////////
-	
 	while(encryptionP.length >= 5) {
 		
 		encryptionWord = [];
@@ -140,15 +138,7 @@ function encode_p() {
 	
 	//Displays the encrypted message
 	document.getElementById("output").innerHTML = 'Encrypted Message: ' + encryption;
-
-	console.log(encryption);
 	
 	return false;
 
 }
-
-
-var egg = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(egg);
-egg.splice(0,5);
-console.log(egg);

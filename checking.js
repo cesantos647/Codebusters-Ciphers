@@ -67,7 +67,7 @@ function change_option() {
 
 	}
 
-	if(cipher_value === 'Aristocrat' && version_value === 'Encrypt') {
+	if(cipher_value === 'Aristocrat' && version_value === 'Encrypt' || cipher_value === 'Patristocrat' && version_value = 'Encrypt') {
 
 		document.getElementById('message_input').innerHTML = 'Your Message';
 
@@ -87,7 +87,7 @@ function change_option() {
 
 	}
 
-	if(cipher_value === 'Aristocrat' && version_value === 'Decrypt')  {
+	if(cipher_value === 'Aristocrat' && version_value === 'Decrypt' || cipher_value === 'Patristocrat' && version_value === 'Decrypt')  {
 
 		document.getElementById('message_input').innerHTML = 'Encrypted Message';
 
@@ -139,6 +139,10 @@ function execute() {
 	} else if(cipher_value === 'Aristocrat' && version_value === 'Decrypt') {
 
 		decode_ar();
+
+	} else if(cipher_value === 'Patristocrat' && version_value === 'Encrypt') {
+
+		encode_p();
 
 	}
 }
