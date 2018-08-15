@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //This is a project that encrypts a message using a caesar cipher
 /*The problem is that you can only encrpyt/decrypt once; make it so that the joined shit becomes an array again*/
 
@@ -20,10 +19,6 @@ var encryption = [];
 
 var decryption = [];
 
-
-
-=======
->>>>>>> 716a07c073743af8e1b302bef043d6c9bf78976f
 //Encodes message by the shift number using a caesar cipher
 function encode_c() {
 
@@ -192,11 +187,11 @@ function decode_c() {
 				if(message[y][i] === alphabet[x]) {
 
 					//Decrypts letter
-<<<<<<< HEAD
+
 					decryptionWord.push(alphabet[((x + (26-shift)) % alphabet.length)]);
-=======
+
 					decryptionWord.push(alphabet[((x - shift) % alphabet.length)]);
->>>>>>> 716a07c073743af8e1b302bef043d6c9bf78976f
+
 
 					//Cancels the search
 					check = true;
@@ -204,11 +199,11 @@ function decode_c() {
 				} else if(message[y][i] === numbers[x % numbers.length]) {
 
 					//Decrypts number
-<<<<<<< HEAD
+
 					decryptionWord.push(numbers[((x + (26-shift) % numbers.length))]);
-=======
+
 					decryptionWord.push(numbers[((x - shift) % numbers.length)]);
->>>>>>> 716a07c073743af8e1b302bef043d6c9bf78976f
+
 
 					//Cancels the search
 					check = true;
