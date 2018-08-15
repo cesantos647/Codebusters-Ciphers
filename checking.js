@@ -88,7 +88,7 @@ function execute() {
 
 	} else if(cipher_value === 'Hill') {
 
-		encode_h
+		encode_h();
 
 	}
 }
