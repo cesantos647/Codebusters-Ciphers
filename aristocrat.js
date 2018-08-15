@@ -105,8 +105,23 @@ function encode_ar() {
 		return false;
 
 	}
+	if(document.getElementById('checkbox_input').checked === false) {
 
-	keyGenerate();
+		key = document.getElementById('key').value;
+
+		if(key.length !== 26) {
+
+			alert('Please submit a proper key')
+
+			return false;
+
+		}
+
+	} else {
+
+		keyGenerate();
+	
+	}
 
 	//Displays message
 	document.getElementById("input").innerHTML = 'Message: ' + message;
@@ -197,8 +212,6 @@ function decode_ar() {
 		return false;
 
 	}
-
-	//keyGenerate();
 
 	//Displays message
 	document.getElementById("input").innerHTML = 'Encrypted Message: ' + message;
