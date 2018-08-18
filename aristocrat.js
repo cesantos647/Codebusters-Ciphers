@@ -105,6 +105,7 @@ function encode_ar() {
 		return false;
 
 	}
+	
 	if(document.getElementById('checkbox_input').checked === false) {
 
 		key = document.getElementById('key').value;
