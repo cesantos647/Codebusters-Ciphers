@@ -117,7 +117,6 @@ function encode_p() {
 	
 	if(encryptionP.length > 0 && encryptionP.length < 5) {
 
-		console.log(encryptionP);
 		encryptionWord = [];
 
 		for(var q = 0; q < encryptionP.length; q++) {
@@ -125,8 +124,6 @@ function encode_p() {
 			encryptionWord.push(encryptionP[q]);
 		
 		}
-		
-			console.log(encryptionWord);
 
 			encryptionWord = encryptionWord.join('');
 
@@ -229,8 +226,6 @@ function decode_p() {
 	
 	//Displays the encrypted message
 	document.getElementById("output").innerHTML = 'Encrypted Message: ' + decryption;
-
-	console.log(decryption);
 	
 	return false;
 

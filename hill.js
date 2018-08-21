@@ -94,18 +94,12 @@ function encode_h() {
 
 	}
 
-	console.log(encryptionWordCheck);
-
-	console.log(encryptionNumCheck);
-
 	//This is for the key
 	key = key.split('');
 	check = false
 	while(key.length % 4 !== 0) {
 
 		key.push(key[0]);
-
-		console.log(key.length);
 
 		if(key.length % 4 !== 0) {
 
@@ -158,12 +152,6 @@ function encode_h() {
 	hillKeyCheck = hillKeyCheckReal;
 	
 	hillKeyNumCheck = hillKeyNumCheckReal;
-	
-	console.log(hillKeyCheckReal);
-	
-	console.log(hillKeyCheck);
-
-	console.log(hillKeyNumCheck);
 
 	hillEncryptWord = [];
 	
@@ -171,12 +159,8 @@ function encode_h() {
 	for(var t = 0; t < encryptionNumCheck.length; t++) {
 	
 		hillEncryptWord.push([(((hillKeyNumCheck[0][0] * encryptionNumCheck[t][0]) + (hillKeyNumCheck[1][0] * encryptionNumCheck[t][1])) % 26), (((hillKeyNumCheck[0][1] * encryptionNumCheck[t][0]) + (hillKeyNumCheck[1][1] * encryptionNumCheck[t][1])) % 26)]);
-	
-			console.log(([(((hillKeyNumCheck[0][0] * encryptionNumCheck[t][0]) + (hillKeyNumCheck[1][0] * encryptionNumCheck[t][1])) % 26), (((hillKeyNumCheck[0][1] * encryptionNumCheck[t][0]) + (hillKeyNumCheck[1][1] * encryptionNumCheck[t][1])) % 26)]));
-	
-	}
 
-	console.log(hillEncryptWord);
+	}
 
 	for(var z = 0; z < hillEncryptWord.length; z++) {
 		
@@ -200,6 +184,4 @@ function encode_h() {
 
 	document.getElementById('output').innerHTML = 'Encrypted Message: ' + encryption;
 	
-	console.log(encryption);
-
 }

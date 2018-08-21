@@ -11,8 +11,6 @@ function change_option() {
     version_value = version[version.selectedIndex].value;
     
     cipher_value = cipher[cipher.selectedIndex].value;
-	
-	console.log(version_value + ' ' + cipher_value);
 
 	if(cipher_value === 'Caesar' && version_value === 'Encrypt') {
 

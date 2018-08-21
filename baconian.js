@@ -67,8 +67,6 @@ function encode_b() {
 	
 	//Displays the encrypted message
 	document.getElementById("output").innerHTML = 'Encrypted Message: ' + encryption;
-
-	console.log(encryption);
 	
 	return false;
 
@@ -172,7 +170,6 @@ function decode_b() {
 	//Displays the encrypted message
 	document.getElementById("output").innerHTML = 'Encrypted Message: ' + decryption;
 
-	console.log(decryption);
 	
 	return false;
 

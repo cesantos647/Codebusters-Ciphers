@@ -79,9 +79,7 @@ function keyGenerate() {
 		}
 
 	}
-
-	console.log(random_key);
-
+	
 	random_key = random_key.join('');
 
 	key = random_key;
@@ -180,8 +178,6 @@ function encode_ar() {
 	
 	//Displays the encrypted message
 	document.getElementById("output").innerHTML = 'Encrypted Message: ' + encryption;
-
-	console.log(encryption);
 	
 	return false;
 
@@ -273,8 +269,6 @@ function decode_ar() {
 	
 	//Displays the encrypted message
 	document.getElementById("output").innerHTML = 'Encrypted Message: ' + decryption;
-
-	console.log(decryption);
 	
 	return false;
 
