@@ -40,7 +40,7 @@ function change_option() {
 
 	}
 
-	if(cipher_value === 'Hill' || cipher_value === 'Affine') {
+	if(cipher_value === 'Hill' || cipher_value === 'Affine' || cipher_value === 'Vigenere') {
 
 		document.getElementById('Decrypt').style.display = 'none';
 
@@ -163,6 +163,10 @@ function execute() {
 	} else if(cipher_value === 'Baconian' && version_value === 'Decrypt') {
 
 		decode_b();
+
+	} else if(cipher_value === 'Vigenere') {
+
+		encode_v();
 
 	}
 
