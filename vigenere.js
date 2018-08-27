@@ -36,9 +36,6 @@ function encode_v() {
 
 	var i = 0;
 
-	console.log(message.length);
-
-
 	while(key.length !== message.length) {
 
 
@@ -48,10 +45,8 @@ function encode_v() {
 
 	}
 
-	console.log(key);
-
 	for(var t = 0; t < key.length; t++) {
-		console.log('Hello');
+
 		var check = false;
 
 		//Checks the alphabet array until the letter is found
@@ -109,11 +104,9 @@ function encode_v() {
 	for(var f = 0; f < messageNum.length; f++) {
 
 		encryptionNumCheck.push(alphabet_number[(messageNum[f] + keyNum[f]) % 26]);
-		console.log(messageNum[f] + ' + ' + keyNum[f] + ' = ' + ((messageNum[f] + keyNum[f]) % 26) + ' meaning letter  ' + (alphabet[(messageNum[f] + keyNum[f]) % 26]))
 	
 	}
 
-	console.log(alphabet[4] + ' + ' + alphabet[5] + ' + ' + alphabet[3]);
 
 	for(var g = 0; g < encryptionNumCheck.length; g++) {
 
@@ -133,15 +126,4 @@ function encode_v() {
 
 	}
 
-	console.log(messageNum);
-	console.log(keyNum);
-	console.log(encryptionWord);
 }
-
-//Convert key to become as long as the message DONE
-//Convert message into numbers DONE
-//Convert key into numbers DONE
-//Add message and key together
-//Convert added numbers into letters
-//Join the letters into words
-//Join the words into a string
