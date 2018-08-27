@@ -1,87 +1,41 @@
 <!doctype html>
-
-<!-- Please remember that you can only call functions from other files if they were loaded before the file that needs to call the function -->
-
 <html>
-
   <head>
-
 	  <script type="text/javascript" src= "variables.js"></script>
-
       <script type="text/javascript" src = 'baconian.js'></script>
-
 	  <script type="text/javascript" src = 'hill.js'></script>
-
       <script type="text/javascript" src = 'vigenere.js'></script>
-
 	  <script type = 'text/javascript' src = 'atbash.js'></script>
-
       <script type="text/javascript" src = 'affine.js'></script>
-
-	  <script type = 'text/javascript' src = 'caesar.js'></script>
-	  
+	  <script type = 'text/javascript' src = 'caesar.js'></script>	  
       <script type = 'text/javascript' src = 'aristocrat.js'></script>
-
       <script type="text/javascript" src = 'patristocrat.js'></script>
-
 	  <script type= "text/javascript" src = 'checking.js'></script>
-
-
   </head>
-
   <body>
-
   	<select id = 'version_check' onchange="change_option()">
-
   		<option value = '' disabled selected> Encryption or Decryption? </option>
-
-  		<option value = 'Encrypt' id = 'Encrypt'> Encrypt </option>
-  		
+  		<option value = 'Encrypt' id = 'Encrypt'> Encrypt </option>  		
   		<option value = 'Decrypt' id = 'Decrypt'> Decrypt </option>
-  	
   	</select>
-
   	<select id = 'cipher_check' onchange="change_option()">
-  	
   		<option value = '' disabled selected> Pick a Cipher </option>
-  	
   		<option value = 'Caesar'> Caesar Cipher </option>
-  	
   		<option value = 'Atbash'> Atbash Cipher </option>
-
         <option value = 'Hill'> Hill Cipher </option>
-
         <option value = 'Affine'> Affine Cipher </option>
-
         <option value = 'Baconian'> Baconian Cipher </option>
-
         <option value = 'Vigenere'> Vigenere Cipher </option>
-
         <option value = 'Aristocrat'> Aristocrat Cipher </option>
-
         <option value= 'Patristocrat'> Patristocrat Cipher </option>
-  	
   	</select>
-
   	<p id = 'input'>  </p>
-
   	<p id = 'keys'>  </p>
-
   	<p id = 'output'>  </p>
-
 	<p id = 'message_input'>Message</p> <input type='text' id='message'/>
-
  	<p id = 'key_input'>Key</p><input type='text' id='key'/>
-
     <p id = 'key_input2'>Key</p><input type="text" id="key2">
-
     <div id = checkbox> <input type = 'checkbox' name = 'Random Key' onclick = 'change_option()' id = 'checkbox_input'/> Randomize Key </div>
-
 	<br><p><button onclick="execute()">Submit</button></p>
-
-
-    <button onclick='encode_v()'> yeet </button>
-
   </body>
- 
 </html>
