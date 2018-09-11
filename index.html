@@ -28,53 +28,74 @@
 
   <body>
 
-  	<select id = 'version_check' onchange="change_option()">
+    <nav>
+  
+    </nav>
 
-  		<option value = '' disabled selected> Encryption or Decryption? </option>
+    <div>	
 
-  		<option value = 'Encrypt' id = 'Encrypt'> Encrypt </option>  		
+      <div class="version">
 
-  		<option value = 'Decrypt' id = 'Decrypt'> Decrypt </option>
+        <select id = 'version_check' onchange="change_option()">
 
-  	</select>
+      		<option value = '' disabled selected> Encryption or Decryption? </option>
 
-  	<select id = 'cipher_check' onchange="change_option()">
+      		<option value = 'Encrypt' id = 'Encrypt'> Encrypt </option>  		
 
-  		<option value = '' disabled selected> Pick a Cipher </option>
+      		<option value = 'Decrypt' id = 'Decrypt'> Decrypt </option>
 
-  		<option value = 'Caesar'> Caesar Cipher </option>
+      	</select>
 
-  		<option value = 'Atbash'> Atbash Cipher </option>
+      </div>
 
-      <option value = 'Hill'> Hill Cipher </option>
+      <div class="codes">
 
-      <option value = 'Affine'> Affine Cipher </option>
+    	<select id = 'cipher_check' onchange="change_option()">
 
-      <option value = 'Baconian'> Baconian Cipher </option>
+    		<option value = '' disabled selected> Pick a Cipher </option>
 
-      <option value = 'Vigenere'> Vigenere Cipher </option>
+    		<option value = 'Caesar'> Caesar Cipher </option>
 
-      <option value = 'Aristocrat'> Aristocrat Cipher </option>
+    		<option value = 'Atbash'> Atbash Cipher </option>
 
-      <option value= 'Patristocrat'> Patristocrat Cipher </option>
+        <option value = 'Hill'> Hill Cipher </option>
 
-  	</select>
+        <option value = 'Affine'> Affine Cipher </option>
 
-  	<p id = 'input'>  </p>
+        <option value = 'Baconian'> Baconian Cipher </option>
 
-  	<p id = 'keys'>  </p>
+        <option value = 'Vigenere'> Vigenere Cipher </option>
 
-  	<p id = 'output'>  </p>
+        <option value = 'Aristocrat'> Aristocrat Cipher </option>
 
-	  <p id = 'message_input'>Message</p> <input type='text' id='message'/>
+        <option value= 'Patristocrat'> Patristocrat Cipher </option>
 
-   	<p id = 'key_input'>Key</p><input type='text' id='key'/>
+    	</select>
 
-    <p id = 'key_input2'>Key</p><input type="text" id="key2">
+      </div>
 
-    <div id = checkbox> <input type = 'checkbox' name = 'Random Key' onclick = 'change_option()' id = 'checkbox_input'/> Randomize Key </div>
+      <div class="output">
 
-	<br><p><button onclick="execute()">Submit</button></p>
+      	<p id = 'input'>  </p>
+
+      	<p id = 'keys'>  </p>
+
+      	<p id = 'output'>  </p>
+
+    	  <p id = 'message_input'>Message</p> <input type='text' id='message'/>
+
+       	<p id = 'key_input'>Key</p><input type='text' id='key'/>
+
+        <p id = 'key_input2'>Key</p><input type="text" id="key2">
+
+        <div id = checkbox> <input type = 'checkbox' name = 'Random Key' onclick = 'change_option()' id = 'checkbox_input'/> Randomize Key </div>
+      </div>
+    	 
+      <br><p><button onclick="execute()">Submit</button></p>
+
+
+
+    </div>
 
   </body>
 
