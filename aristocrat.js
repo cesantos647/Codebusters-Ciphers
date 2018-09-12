@@ -1,12 +1,9 @@
 var random_key = [];
-
 var index;
 
 function arraymove(arr, fromIndex, toIndex) {
     var element = arr[fromIndex];
- 
     arr.splice(fromIndex, 1);
- 
     arr.splice(toIndex, 0, element);
 }
 
@@ -14,74 +11,45 @@ function keyGenerate() {
 	random_key = [];
 
 	index = Math.round(Math.random() * 25);
-	
 	if(index === 0) {
-	
 		index = Math.round(Math.random() * 25);
-	
 	}
 	
 	random_key.push(alphabet[index]);
-
 	while(random_key.length < 26) {
-
 		check = false;
-
 		index = Math.round(Math.random() * 25);
-
 		for(var l = 0; l < random_key.length && check === false; l++) {
-
 			if(alphabet[index] === random_key[l]) {
-	
 				check = true
-
 			}
-
 		}
 
+		//Checks arguments then pushes letter
 		if(check === false && index !== random_key.length) {
-
 			random_key.push(alphabet[index]);
-
 		}
-
 		if(index === random_key.length) {
-
 			random_key.splice(Math.round(Math.random() * random_key.length), 0, alphabet[index]);
-
 		}
-
 	}
 	
 	var checkingRandom = true;
-
 	while(checkingRandom === true) {
-
 		var q = 0;
-
 		for(var y = 0; y < alphabet.length; y++) {
-			
-			if(alphabet[y] === random_key[y]) {
-				
-				q+=1;
-			
-			}
-		
+			if(alphabet[y] === random_key[y]) {				
+				q+=1;			
+			}		
 		}
-
-		if(q === 0) {
-			
+		if(q === 0) {			
 			checkingRandom = false;
-		
 		} else {
 			arraymove(random_key, 0, 25);
-
 		}
-
 	}
 	
 	random_key = random_key.join('');
-
 	key = random_key;
 }
 
@@ -90,6 +58,7 @@ function keyGenerate() {
 
 function encode_ar() {
 
+	//Resets encryption message
 	encryption = [];
 
 	//Gets message that was submitted
