@@ -10,12 +10,16 @@ function arraymove(arr, fromIndex, toIndex) {
 function keyGenerate() {
 	random_key = [];
 
+	//Creates random number
 	index = Math.round(Math.random() * 25);
 	if(index === 0) {
 		index = Math.round(Math.random() * 25);
 	}
 	
+	//Pushes the first letter
 	random_key.push(alphabet[index]);
+
+	//Pushes the rest of the alphabet randomly
 	while(random_key.length < 26) {
 		check = false;
 		index = Math.round(Math.random() * 25);
@@ -34,6 +38,8 @@ function keyGenerate() {
 		}
 	}
 	
+
+	//Makes sure that a letter is never in its original position
 	var checkingRandom = true;
 	while(checkingRandom === true) {
 		var q = 0;
