@@ -23,7 +23,7 @@ function keyGenerate() {
 	while(random_key.length < 26) {
 		check = false;
 		index = Math.round(Math.random() * 25);
-		for(var l = 0; l < random_key.length && check === false; l++) {
+		for(var l = 0; l < random_key.length; l++) {
 			if(alphabet[index] === random_key[l]) {
 				check = true
 			}
@@ -79,6 +79,8 @@ function encode_ar() {
 
 	}
 	
+	message = message.toLowerCase();
+
 	if(document.getElementById('checkbox_input').checked === false) {
 
 		key = document.getElementById('key').value;
@@ -128,7 +130,7 @@ function encode_ar() {
 			for(var x = 0; x < alphabet.length && check === false; x++) {
 
 				//Once the letter is found, the letter is changed based on the key
-				if(message[y][i] === alphabet[x]) {
+				if(message[y][i] === alphabet[x] || capital[x]) {
 
 					//Encrypts letter
 					encryptionWord.push(key[x]);
@@ -177,6 +179,8 @@ function decode_ar() {
 		return false;
 
 	}
+
+	message = message.toLowerCase();
 
 	key = document.getElementById('key').value;
 
