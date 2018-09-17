@@ -130,7 +130,7 @@ function encode_ar() {
 			for(var x = 0; x < alphabet.length && check === false; x++) {
 
 				//Once the letter is found, the letter is changed based on the key
-				if(message[y][i] === alphabet[x] || capital[x]) {
+				if(message[y][i] === alphabet[x]) {
 
 					//Encrypts letter
 					encryptionWord.push(key[x]);
