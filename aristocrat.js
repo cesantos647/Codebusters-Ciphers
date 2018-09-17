@@ -33,12 +33,14 @@ function keyGenerate() {
 		if(check === false && index !== random_key.length) {
 			random_key.push(alphabet[index]);
 		}
-		if(index === random_key.length) {
+		/*if(index === random_key.length) {
+			console.log("This is useful");
 			random_key.splice(Math.round(Math.random() * random_key.length), 0, alphabet[index]);
-		}
+		}*/
+		console.log(random_key.length);
 	}
 	
-
+/*
 	//Makes sure that a letter is never in its original position
 	var checkingRandom = true;
 	while(checkingRandom === true) {
@@ -51,10 +53,11 @@ function keyGenerate() {
 		if(q === 0) {			
 			checkingRandom = false;
 		} else {
+			console.log("rip");
 			arraymove(random_key, 0, 25);
 		}
 	}
-	
+	*/
 	random_key = random_key.join('');
 	key = random_key;
 }
