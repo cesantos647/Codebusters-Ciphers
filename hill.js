@@ -26,6 +26,8 @@ function encode_h() {
 
 	}
 
+	message = message.toLowerCase();
+
 	//Gets shift number that was submitted
 	key = document.getElementById('key').value;
 

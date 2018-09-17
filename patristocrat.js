@@ -23,6 +23,9 @@ function encode_p() {
 		return false;
 
 	}
+
+	message = message.toLowerCase();
+
 	if(document.getElementById('checkbox_input').checked === false) {
 
 		key = document.getElementById('key').value;
@@ -159,6 +162,8 @@ function decode_p() {
 		return false;
 
 	}
+
+	message = message.toLowerCase();
 
 	key = document.getElementById('key').value;
 

@@ -45,7 +45,7 @@ function encode_af() {
 			//Checks the alphabet array until the letter is found
 			for(var x = 0; x < alphabet.length && check === false; x++){
 				//Once the letter is found, the letter is keyed by the amount specified by the user
-				if(message[y][i] === alphabet[x]) {
+				if(message[y][i] === alphabet[x] || capital[x]) {
 					//Encrypts letter
 					encryptionWord.push(alphabet[(((x * key1) + key2) % alphabet.length)]);
 					//Cancels the search

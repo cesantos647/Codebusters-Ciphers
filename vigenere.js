@@ -16,6 +16,8 @@ function encode_v() {
 
 	}
 
+	message = message.toLowerCase();
+
 	key = document.getElementById('key').value;
 
 	var keyNoSpaceCount = key.split(' ').join('').split('');

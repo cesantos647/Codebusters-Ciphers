@@ -13,6 +13,8 @@ function encode_b() {
 		return false;
 
 	}
+
+	message = message.toLowerCase();
 	
 	//Displays message
 	document.getElementById("input").innerHTML = 'Message: ' + message;
@@ -92,6 +94,8 @@ function decode_b() {
 		return false;
 
 	}
+
+	message = message.toLowerCase();
 
 	//Displays message
 	document.getElementById("input").innerHTML = 'Encrypted Message: ' + message;

@@ -20,6 +20,8 @@ function encode_c() {
 
 	}
 
+	message = message.toLowerCase();
+
 	//Gets shift number that was submitted
 	shift = parseInt(document.getElementById('key').value);
 
@@ -126,6 +128,8 @@ function decode_c() {
 		return false;
 
 	}
+
+	message = message.toLowerCase();
 
 	//Gets shift number that was submitted
 	shift = parseInt(document.getElementById('key').value);
