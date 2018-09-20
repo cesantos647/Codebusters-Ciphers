@@ -1,10 +1,7 @@
 //This is where all of the global variables go
-
 //creates an array for the alphabet and numbers
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; 
-
 var capital = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-
 var alphabet_number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
 
 var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
@@ -1868,59 +1865,34 @@ function encode_h() {
 
 	//This is for the key
 	key = key.split('');
-	check = false
+	check = false;
 	while(key.length % 4 !== 0) {
-
 		key.push(key[0]);
-
 		if(key.length % 4 !== 0) {
-
 			key.push(key[1]);
-
 		}
-
 	}
-
 	for(var p = 0; p < key.length; p++) {
-		
 		for(var e = 0; e < alphabet.length; e++) {
-
 			if(key[p] === alphabet[e]) {
-
 				hillKeyNum.push(alphabet_number[e]);
-
 			} else if(typeof(key[p]) === 'number'){
-
 				hillKeyNum.push(key[p]);
-
 			}
-
 		}
-
 		if((p % 2) === 1) {
-
 			hillKey.push(key[p]);
-
 			hillKeyCheck.push(hillKey);
-
 			hillKeyNumCheck.push(hillKeyNum);
-
 			hillKeyNum = [];
-
 			hillKey = [];
-
 		} else {
-
 			hillKey.push(key[p]);
-
 		}
 	}
-
 	//Way to make the key actually work since the method places the array items the wrong way, vertical instead of horizontally first
 	var hillKeyCheckReal = [[hillKeyCheck[0][0],hillKeyCheck[1][0]],[hillKeyCheck[0][1],hillKeyCheck[1][1]]]
-
-	var hillKeyNumCheckReal = [[hillKeyNumCheck[0][0],hillKeyNumCheck[1][0]],[hillKeyNumCheck[0][1],hillKeyNumCheck[1][1]]]
-	
+	var hillKeyNumCheckReal = [[hillKeyNumCheck[0][0],hillKeyNumCheck[1][0]],[hillKeyNumCheck[0][1],hillKeyNumCheck[1][1]]]	
 	hillKeyCheck = hillKeyCheckReal;
 	hillKeyNumCheck = hillKeyNumCheckReal;
 	hillEncryptWord = [];
