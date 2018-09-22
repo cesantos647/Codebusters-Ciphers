@@ -335,24 +335,6 @@ function keyGenerate() {
 		}
 		console.log(random_key.length);
 	}
-/*
-	//Makes sure that a letter is never in its original position
-	var checkingRandom = true;
-	while(checkingRandom === true) {
-		var q = 0;
-		for(var y = 0; y < alphabet.length; y++) {
-			if(alphabet[y] === random_key[y]) {				
-				q+=1;			
-			}		
-		}
-		if(q === 0) {			
-			checkingRandom = false;
-		} else {
-			console.log("rip");
-			arraymove(random_key, 0, 25);
-		}
-	}
-	*/
 	random_key = random_key.join('');
 	key = random_key;
 }
