@@ -33,7 +33,7 @@ function keyGenerate() {
 		if(check === false && index !== random_key.length) {
 			random_key.push(alphabet[index]);
 		}
-		if(index === (random_key.length-1) {
+		if(index === (random_key.length-1)) {
 			console.log("This is useful");
 			random_key.splice(Math.round(Math.random() * random_key.length), 0, alphabet[index]);
 		}

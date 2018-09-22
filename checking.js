@@ -93,7 +93,7 @@ function change_option() {
 
 	}
 
-	if(document.getElementById('checkbox_input').checked === true || cipher_value === 'Atbash' || cipher_value === 'Baconian') {
+	if(document.getElementById('checkbox_input').checked === true || cipher_value === 'Atbash' || cipher_value === 'Baconian' || cipher_value === 'Patristocrat') {
 
 		document.getElementById('key').style.display = 'none';
 		
