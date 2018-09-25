@@ -40,7 +40,7 @@ function keyGenerate() {
 		console.log(random_key.length);
 	}
 	
-/*
+
 	//Makes sure that a letter is never in its original position
 	var checkingRandom = true;
 	while(checkingRandom === true) {
@@ -57,7 +57,7 @@ function keyGenerate() {
 			arraymove(random_key, 0, 25);
 		}
 	}
-	*/
+	
 	random_key = random_key.join('');
 	key = random_key;
 }
@@ -254,4 +254,30 @@ function decode_ar() {
 	
 	return false;
 
+}
+
+function checkKey() {
+	var alphabet_check = alphabet;
+	alphabet_check.splice(4,1);
+	alphabet_check.push('j');
+	var check_num = 0
+	console.log(key);
+	for(var i=0;i<key.length;i++) {
+		check = false;
+		for(var z=0;check==false && z<alphabet.length;z++) {
+			if(key[i] === alphabet[z]) {
+				for(var x=0;check===false && x<alphabet_check;x++) {
+					if(key[i]==alphabet_check[x]) {
+						alphabet_check.splice(x,1);
+						check_num++
+						check = true;
+					}
+				}
+			} else {
+				check = true;
+			}
+		}
+	}
+console.log(check_num);
+console.log(key);
 }
