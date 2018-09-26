@@ -24,7 +24,7 @@ function keyGenerate() {
 		check = false;
 		index = Math.round(Math.random() * 25);
 		for(var l = 0; l < random_key.length; l++) {
-			if(alphabet[index] === random_key[l]) {
+			if(alphabet[index] == random_key[l]) {
 				check = true
 			}
 		}
@@ -33,23 +33,10 @@ function keyGenerate() {
 		if(check === false && index !== random_key.length) {
 			random_key.push(alphabet[index]);
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
 		if(index === (random_key.length-1)) {
 			console.log("This is useful");
 			random_key.splice(Math.round(Math.random() * random_key.length), 0, alphabet[index]);
 		}
-		console.log(random_key.length);
-=======
-		if(index === random_key.length) {
-			random_key.splice(Math.round(Math.random() * random_key.length), 0, alphabet[index]);
-		}
->>>>>>> parent of 6ed11a2... removed some functions
-=======
-		if(index === random_key.length) {
-			random_key.splice(Math.round(Math.random() * random_key.length), 0, alphabet[index]);
-		}
->>>>>>> parent of 6ed11a2... removed some functions
 	}
 	
 
@@ -71,6 +58,7 @@ function keyGenerate() {
 	
 	random_key = random_key.join('');
 	key = random_key;
+	console.log(key);
 }
 
 
@@ -282,7 +270,8 @@ function checkKey() {
 			console.log(key[i]+ "===" +alphabet[z]);
 			if(key[i] === alphabet[z]) {
 				console.log('hello');
-				for(var x=0;x<alphabet_check;x++) {
+				console.log(alphabet_check.length);
+				for(var x=0;x<alphabet_check.length;x++) {
 					console.log(key[i] + " == " +alphabet_check[x]);
 					console.log('woo');
 					if(key[i]==alphabet_check[x]) {
@@ -296,6 +285,11 @@ function checkKey() {
 			}
 		}
 	}
-console.log(check_num);
+	if(check_num < 26) {
+		keyGenerate();
+		console.log(key);
+		//checkKey();
+	}
+console.log("Number of errors: " + (26-check_num));
 console.log(key);
 }
