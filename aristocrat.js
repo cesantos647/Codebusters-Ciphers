@@ -8,70 +8,17 @@ function arraymove(arr, fromIndex, toIndex) {
 }
 
 function keyGenerate() {
-	random_key = [];
-
-	//Creates random number
-	index = Math.round(Math.random() * 25);
-	if(index === 0) {
-		index = Math.round(Math.random() * 25);
+	//Creates area for the randomized key
+	var random_key = [];
+	//Creates a place for unused letters
+	var alphabet_check = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+	//Pushes a random letter into a random place in the key until it's all gone
+	while(alphabet_check.length > 0) {
+		var index = Math.floor(Math.random() * alphabet_check.length);
+		random_key.push(alphabet_check[index]);
+		alphabet_check.splice(index,1);
 	}
-	
-	//Pushes the first letter
-	random_key.push(alphabet[index]);
-
-	//Pushes the rest of the alphabet randomly
-	while(random_key.length < 26) {
-		check = false;
-		index = Math.round(Math.random() * 25);
-		for(var l = 0; l < random_key.length; l++) {
-			if(alphabet[index] == random_key[l]) {
-				check = true
-			}
-		}
-
-		//Checks arguments then pushes letter
-		if(check === false && index !== random_key.length) {
-			random_key.push(alphabet[index]);
-		}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of fe3fbdb... Revert "removed some functions"
-		if(index === (random_key.length-1)) {
-			console.log("This is useful");
-			random_key.splice(Math.round(Math.random() * random_key.length), 0, alphabet[index]);
-		}
-<<<<<<< HEAD
-=======
-		console.log(random_key.length);
-=======
-		if(index === random_key.length) {
-			random_key.splice(Math.round(Math.random() * random_key.length), 0, alphabet[index]);
-		}
->>>>>>> parent of 6ed11a2... removed some functions
->>>>>>> parent of fe3fbdb... Revert "removed some functions"
-	}
-	
-
-	//Makes sure that a letter is never in its original position
-	var checkingRandom = true;
-	while(checkingRandom === true) {
-		var q = 0;
-		for(var y = 0; y < alphabet.length; y++) {
-			if(alphabet[y] === random_key[y]) {				
-				q+=1;			
-			}		
-		}
-		if(q === 0) {			
-			checkingRandom = false;
-		} else {
-			arraymove(random_key, 0, 25);
-		}
-	}
-	
-	random_key = random_key.join('');
-	key = random_key;
-	console.log(key);
+	key = random_key.join('');
 }
 
 
@@ -93,7 +40,7 @@ function encode_ar() {
 		return false;
 
 	}
-	
+	//Makes everything lowercase
 	message = message.toLowerCase();
 
 	if(document.getElementById('checkbox_input').checked === false) {
