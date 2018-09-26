@@ -259,14 +259,21 @@ function decode_ar() {
 function checkKey() {
 	var alphabet_check = alphabet;
 	alphabet_check.splice(4,1);
-	alphabet_check.push('j');
+	//alphabet_check.push('j');
 	var check_num = 0
 	console.log(key);
 	for(var i=0;i<key.length;i++) {
 		check = false;
-		for(var z=0;check==false && z<alphabet.length;z++) {
+		console.log("i = " + i);
+		for(var z=0;z<alphabet.length;z++) {
+			console.log("z =  " + z);
+
+			console.log(key[i]+ "===" +alphabet[z]);
 			if(key[i] === alphabet[z]) {
-				for(var x=0;check===false && x<alphabet_check;x++) {
+				console.log('hello');
+				for(var x=0;x<alphabet_check;x++) {
+					console.log(key[i] + " == " +alphabet_check[x]);
+					console.log('woo');
 					if(key[i]==alphabet_check[x]) {
 						alphabet_check.splice(x,1);
 						check_num++
