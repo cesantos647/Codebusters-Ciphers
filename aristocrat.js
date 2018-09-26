@@ -33,10 +33,23 @@ function keyGenerate() {
 		if(check === false && index !== random_key.length) {
 			random_key.push(alphabet[index]);
 		}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> parent of fe3fbdb... Revert "removed some functions"
 		if(index === (random_key.length-1)) {
 			console.log("This is useful");
 			random_key.splice(Math.round(Math.random() * random_key.length), 0, alphabet[index]);
 		}
+<<<<<<< HEAD
+=======
+		console.log(random_key.length);
+=======
+		if(index === random_key.length) {
+			random_key.splice(Math.round(Math.random() * random_key.length), 0, alphabet[index]);
+		}
+>>>>>>> parent of 6ed11a2... removed some functions
+>>>>>>> parent of fe3fbdb... Revert "removed some functions"
 	}
 	
 
