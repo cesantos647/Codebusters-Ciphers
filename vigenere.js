@@ -1,8 +1,9 @@
 function encode_v() {
-
 	var keyNum = [];
 
-	var messageNum = []
+	var messageNum = [];
+
+	encryptionWord = [];
 
 	//Gets message that was submitted
 	message = document.getElementById('message').value;
@@ -71,6 +72,9 @@ function encode_v() {
 
 	message = message.split(' ');
 
+	messageNum.length = 0;
+	encryptionNumCheck.length = 0;
+
 	//Encodes message word by word
 	for(var y = 0; y < message.length; y++) {
 
@@ -109,7 +113,6 @@ function encode_v() {
 	
 	}
 
-
 	for(var g = 0; g < encryptionNumCheck.length; g++) {
 
 		//Resets the search for each letter in the message
@@ -127,5 +130,9 @@ function encode_v() {
 
 
 	}
+
+	encryption = encryptionWord.join('');
+
+	document.getElementById('output').innerHTML = 'Encrypted Message: ' + encryption;
 
 }
