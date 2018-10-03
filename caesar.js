@@ -179,11 +179,11 @@ function decode_c() {
 					//Decrypts letter
 					decryptionWord.push(alphabet[((x + (26-shift)) % alphabet.length)]);
 
-					decryptionWord.push(alphabet[((x - shift) % alphabet.length)]);
+					//decryptionWord.push(alphabet[((x - shift) % alphabet.length)]);
 
 					decryptionWord.push(alphabet[((x + (26-shift)) % alphabet.length)]);
 
-					decryptionWord.push(alphabet[((x - shift) % alphabet.length)]);
+					//decryptionWord.push(alphabet[((x - shift) % alphabet.length)]);
 
 
 					//Cancels the search
@@ -193,9 +193,9 @@ function decode_c() {
 
 					//Decrypts number
 
-					decryptionWord.push(numbers[((x + (26-shift) % numbers.length))]);
+					decryptionWord.push(numbers[((x + (10-shift) % numbers.length))]);
 
-					decryptionWord.push(numbers[((x - shift) % numbers.length)]);
+					//decryptionWord.push(numbers[((x - shift) % numbers.length)]);
 
 
 					//Cancels the search

@@ -117,7 +117,7 @@ function execute() {
 
 		encode_c();
 	
-	} else if(cipher_value ==='Caesar' && version_value === 'Encrypt') {
+	} else if(cipher_value ==='Caesar' && version_value === 'Decrypt') {
 
 		decode_c();
 
