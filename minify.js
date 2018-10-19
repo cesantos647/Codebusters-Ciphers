@@ -46,6 +46,24 @@ var hillKeyCheck = [];
 var hillKeyNumCheck = [];
 
 var hillencryptWord = [];
+
+function repeat(key) {
+	var x=0;
+	for(var i=0; i<alphabet.length; i++) {
+		
+		if(alphabet[i] == key[i]) {
+			console.log(key[i]);
+			x++;
+		}
+	}
+	if(x > 0) {
+		keyGenerate();
+	} else {
+		console.log('good!');
+	}
+
+}
+
 function encode_af() {
 
 	//Resets encrypted message
@@ -142,6 +160,7 @@ function keyGenerate() {
 		alphabet_check.splice(index,1);
 	}
 	key = random_key.join('');
+	repeat(key);
 }
 
 
