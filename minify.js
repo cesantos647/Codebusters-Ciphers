@@ -1711,3 +1711,7 @@ function encode_v() {
 	document.getElementById('output').innerHTML = 'Encrypted Message: ' + encryption;
 
 }
+
+function toUpperCase() {
+	return document.getElementById('output').innerHTML.toUpperCase();
+}
