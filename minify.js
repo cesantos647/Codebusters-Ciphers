@@ -1,56 +1,32 @@
 //This is where all of the global variables go
-
 //creates an array for the alphabet and numbers
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; 
-
 var capital = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-
 var alphabet_number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
-
 var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-
 var baconian_number = ['aaaaa', 'aaaab', 'aaaba', 'aaabb', 'aabaa', 'aabab', 'aabba', 'aabbb', 'abaaa', 'abaab', 'ababa', 'ababb', 'abbaa', 'abbab', 'abbba', 'abbbb', 'baaaa', 'baaab', 'baaba', 'baabb', 'babaa', 'babab', 'babba', 'babbb', 'bbaaa', 'bbaab'];
 //Takes message and shift number and creates a variable for the message
 var message;
-
 var shift;
-
 var key;
-
 var encryptionWord = [];
-
 var encryptionWordCheck = [];
-
 var encryptionNumCheck = [];
-
 var decryptionWord = [];
-
 var encryption = [];
-
 var decryption = [];
-
 //Hill Cipher
-
 var hillSplit = [];
-
 var hillSplitNum = [];
-
 var hillKey = [];
-
 var hillKeyNum = [];
-
 var hillKeyNumproto = [];
-
 var hillKeyCheck = [];
-
 var hillKeyNumCheck = [];
-
 var hillencryptWord = [];
-
 function repeat(key) {
 	var x=0;
 	for(var i=0; i<alphabet.length; i++) {
-		
 		if(alphabet[i] == key[i]) {
 			console.log(key[i]);
 			x++;
@@ -61,15 +37,11 @@ function repeat(key) {
 	} else {
 		console.log('good!');
 	}
-
 }
-
 function encode_af() {
-
 	//Resets encrypted message
 	encryptionWord = [];
 	encryption = [];
-
 	//Gets message that was submitted
 	message = document.getElementById('message').value;
 	//Checks if there is a message
@@ -77,7 +49,6 @@ function encode_af() {
 		alert('Please submit a message');
 		return false;
 	}
-
 	//Gets key number that was submitted
 	var key1 = parseInt(document.getElementById('key').value);
 	var key2 = parseInt(document.getElementById('key2').value);
@@ -86,20 +57,16 @@ function encode_af() {
 		alert('Please submit a number');
 		return false;
 	}
-
 	//Displays message
 	document.getElementById("input").innerHTML = 'Message: ' + message;
 	//Displays key number
 	document.getElementById("keys").innerHTML = 'Function: ' + 'f(x) = ' + key1 + 'x + ' + key2 + ' mod 26';
-
 	//Splits message into array of words
 	message = message.split(' ');
-
 	//Splits each word in the message into an array of letters
 	for(var z = 0; z < message.length; z++) {
 		message[z] = message[z].split('');
 	}
-
 	//Encodes message word by word
 	for(y = 0; y < message.length; y++) {
 		//Resets array to prepare for a new word
@@ -124,24 +91,19 @@ function encode_af() {
 				}
 			}
 		}
-		
 		//Joins the array of encrypted letters into a word 
 		encryptionWord = encryptionWord.join('');
 		//Pushes encrypted word into the encrypted message array
 		encryption.push(encryptionWord);
 	}
-
 	//Joins each item in the array into a single string
 	encryption = encryption.join(' ');
 	//Displays the encrypted message
 	document.getElementById("output").innerHTML = 'Encrypted Message: ' + encryption;
 	return false;
-
-
 }
 var random_key = [];
 var index;
-
 function arraymove(arr, fromIndex, toIndex) {
     var element = arr[fromIndex];
     arr.splice(fromIndex, 1);
@@ -1613,105 +1575,61 @@ function encode_v() {
 	key = key.split('');
 
 	var i = 0;
-
 	while(key.length !== message.length) {
-
-
 		key.push(key[i % key.length]);
-
 		i++;
-
 	}
-
 	for(var t = 0; t < key.length; t++) {
-
 		var check = false;
-
 		//Checks the alphabet array until the letter is found
 		for(var a = 0; a < alphabet.length && check === false; a++) {
-
 			//Once the letter is found, the letter is keyed by the amount specified by the user
 			if(key[t] === alphabet[a]) {
-
 				//Encrypts letter
 				keyNum.push(alphabet_number[a]);
-
 				//Cancels the search
 				check = true;
-
 			}
-
 		}
-
 	}
-
 	message = message.split(' ');
-
 	messageNum.length = 0;
 	encryptionNumCheck.length = 0;
-
 	//Encodes message word by word
 	for(var y = 0; y < message.length; y++) {
-
 		message[y] = message[y].split('')
-
 		//Encrypts each letter or number in the word
 		for(var i = 0; i < message[y].length; i++) {
-
 			//Resets the search for each letter in the message
 			var check = false;
-
 			//Checks the alphabet array until the letter is found
 			for(var x = 0; x < alphabet.length && check === false; x++) {
-
 				//Once the letter is found, the letter is keyed by the amount specified by the user
 				if(message[y][i] === alphabet[x]) {
-
 					//Encrypts letter
 					messageNum.push(alphabet_number[x]);
-
 					//Cancels the search
 					check = true;
-
 				}
-
 			}
-
 		}
-	
 	}
-
 	//Encodes message word by word
 	for(var f = 0; f < messageNum.length; f++) {
-
 		encryptionNumCheck.push(alphabet_number[(messageNum[f] + keyNum[f]) % 26]);
-	
 	}
-
 	for(var g = 0; g < encryptionNumCheck.length; g++) {
-
 		//Resets the search for each letter in the message
 		var check = false;
-
 		for(var t = 0; t < alphabet.length && check === false; t++) {
-
 			if(encryptionNumCheck[g] === alphabet_number[t]) {
-
 				encryptionWord.push(alphabet[t]);
-
 			}
-
 		}
-
-
 	}
-
 	encryption = encryptionWord.join('');
-
 	document.getElementById('output').innerHTML = 'Encrypted Message: ' + encryption;
-
 }
-
 function toUpperCase() {
 	return document.getElementById('output').innerHTML.toUpperCase();
 }
